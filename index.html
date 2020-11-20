@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>myMemoPad</title>
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <link rel='stylesheet' href='css/reset.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+  <h1>調整くん</h1>
+  <!-- 幹事用セクション -->
+  <!-- 開催するイベント情報と候補日時の入力 -->
+  <input id="btn_newEvent" type="button" value="イベントを作成する"></input>
+  <section id="sec_event_setting">
+      <ul class="forms">
+      <!-- イベント情報の編集 -->
+        <li class="form-half">
+          <form action="" id="form_event_info">
+            <ul>
+              <li><input name="イベント名" type="text" id="name_event" class="input_event_info" placeholder="イベント名"></li>
+              <li><input name="幹事名" type="text" id="name_producer" class="input_event_info" placeholder="幹事のお名前"></li>
+              <li><textarea name="イベントの説明" id="memo_event_detail" class="input_event_info" placeholder="イベントの説明"></textarea></li>
+            </ul>
+          </form>
+        </li>
+
+      <!-- イベント開催日時の候補； 編集・候補の追加可能-->
+        <li class="form-half">
+          <form action="" id="form_schedule">
+            <input type="button" id="btn_add_date" value="日時の候補を追加" onclick="appendRow()">
+            <table id="tbl_candidate_dates">
+            <!-- 入力 フォーム（表）先頭タイトル行-->
+            <tr>
+                <th>日付</th>
+                <th>時間帯</th>
+            </tr>
+            <!-- 入力 フォーム（表）先頭タイトル行-->
+            <tr>
+                <td>
+                  <input name="候補日_1" type="date" class="candi_date" id="candi_date_1">
+                </td>
+                <td>
+                  <select name="候補時間_1" class="candi_timezone" id="candi_timezone_1">
+                    <option value="empty"></option>
+                    <option value="15:00">15:00 ~ </option>
+                    <option value="16:00">16:00 ~ </option>
+                    <option value="17:00">17:00 ~ </option>
+                    <option value="18:00">18:00 ~ </option>
+                    <option value="19:00">19:00 ~ </option>
+                    <option value="20:00">20:00 ~ </option>
+                    <option value="21:00">21:00 ~ </option>
+                  </select>
+                </td>
+            </tr>
+            </table>
+          </form> 
+        </li>  
+      </ul>
+
+    <!-- イベント保存/削除ボタン -->
+    <ul id="btn_setting_control_list">
+      <li><input id="btn_save" class="btn" type="button" value="保存する"></input></li>
+      <li><input id="btn_del_event" class="btn" type="button" value="イベントを削除する"></input></li>
+    </ul>
+  </section>
+
+  <!-- 参加者用セクション -->
+  <section id="sec_vote">
+  <h1>参加可否 入力</h1>
+  <ul class="forms">
+    <li class="form-half">
+      <input name="記入者名" class="input_event_info" type="text" id="name_attendee" placeholder="お名前">
+    </li>
+    <li class="form-half">
+      <!-- 出席可否を入力する対象を選択 -->
+      <select name="対象イベント" class="input_event_info" id="targ_event">
+        <option value="empty">入力するイベントを選んでください</option>
+      </select>
+    </li>
+  </ul>
+
+  <div class='div_results'>
+    <table id="tbl_results">
+      <!-- 出欠表 先頭タイトル行-->
+      <tr>
+          <th>日付</th>
+          <th>時間帯</th>
+      </tr>
+    </table>
+  </div>
+
+  <div class="btn_wrapper">
+    <input id="btn_submit" class="big_btn" type="button" value="出欠を送信する"></input>
+  </div>
+  </section>
+
+  </main>
+  <footer>
+    <small>Copyright(C) Studio TACO. All Rights Reserved.</small>
+  </footer>
+  <script src="./js/chouseisan.js"></script>
+</div>
+</body>
+</html>

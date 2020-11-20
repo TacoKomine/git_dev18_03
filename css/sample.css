@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 32px;
+    width: 100%;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px auto;
+    font-size: 100%;
+}
+
+
+
+main {
+    width: 90%;
+    display: block;
+    position: relative;
+    margin: 0 auto 100px;
+}
+
+footer {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px 0;
+}
+
+p {
+    font-size: 200%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    height: 200px;
+}
+
+ul {
+    border: 1px solid #000000;
+    display: table;
+    /* 定義 */
+    table-layout: fixed;
+    width: 100%;
+    font-size: 20px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    display: table-cell;
+    /* 定義 */
+    cursor: pointer;
+    color: #0d7dfd;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+li:hover {
+    background: #0d7dfd;
+    color: #fff;
+}
+
+textarea {
+    margin: 20px auto;
+    width: 100%;
+    height: 100px;
+    font-size: 80%;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
+    resize: none;
+    display: block;
+    border: none;
+    padding: 20px 10px;
+}
+
+#key {
+    margin: 50px auto;
+    width: 100%;
+    font-size: 80%;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
+    padding: 20px 10px;
+    border: none;
+    display: block;
+}
+
+table {
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+    padding: 0;
+}
+
+tr {
+    display: flex;
+    justify-self: center;
+}
+
+th {
+    width: 30%;
+    font-size: 24px;
+    background-color: #eee;
+    padding: 0;
+    margin: 0;
+}
+
+td {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.memo,
+#list {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#list li {
+    display: flex;
+    padding: 0;
+}
+
+#list li:hover {
+    background: none;
+}
+
+#list li span {
+    display: block;
+    color: #000;
+    padding: 20px;
+    width: 50%;
+}
+
+#list li span:first-child {
+    color: #000;
+    border-right: 1px solid #000;
+}
